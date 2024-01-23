@@ -19,7 +19,7 @@ class InheritedCounter extends InheritedWidget {
   }
 
   static InheritedCounter of(BuildContext context) {
-    final inheritedCounter =  context.dependOnInheritedWidgetOfExactType<InheritedCounter>();
+    InheritedCounter? inheritedCounter =  context.dependOnInheritedWidgetOfExactType<InheritedCounter>();
     if(inheritedCounter ==null){
       throw FlutterError("InheritedCounter.of() called in a context which does not containe InheritedCounter");
     }

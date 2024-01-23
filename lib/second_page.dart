@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inherited_widget/inherited_counter.dart';
 
+import 'custom_appbar.dart';
+
 class SecondPage extends StatelessWidget {
   const SecondPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: CustomAppBar(
+        title: const Text("Second Page"),
+      ),
       body: Center(
         child: ValueListenableBuilder<int>(
             valueListenable: InheritedCounter.of(context).count,
