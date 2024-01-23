@@ -13,6 +13,7 @@ class SecondPage extends StatelessWidget {
         title: const Text("Second Page"),
       ),
       body: Center(
+        //Display counter value from inherited widget
         child: ValueListenableBuilder<int>(
             valueListenable: InheritedCounter.of(context).count,
             builder: (context, v, _) {
@@ -24,6 +25,7 @@ class SecondPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          //Call decrement function from inherited counter
           InheritedCounter.of(context).decrement();
         },
         tooltip: 'Decrement',
